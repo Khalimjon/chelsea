@@ -8,11 +8,12 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    // public function index(){
-    //     $users = User::count();
+    public function index(){
+        $users = User::count();
 
-    //     return view('admin.index', [
-    //         'users' => $users
-    //     ]);
-    // }
+        dd($users);
+        return view('admin.index', [
+            'users' => $users
+        ]);
+    }
 }

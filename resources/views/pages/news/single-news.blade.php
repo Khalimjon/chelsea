@@ -11,15 +11,15 @@
             <div class="col-md-9">
                 <div class="feature-post">
                     <div class="feature-img">
-                    <img src="{{$item->photo}}" class="img-responsive" alt="#" />
+                    <img src="{{ asset('storage/'. $item->photo) }}" class="img-responsive" alt="#" />
                     </div>
                     <div class="feature-cont">
                     <div class="post-people">
                         <div class="left-profile">
                             <div class="post-info">
-                                <img src="images/profile-img.png" alt="#" />
+                                <img src="/images/profile-img.png" alt="#" />
                                 <span>
-                                <h4>{{$item->user->name}}</h4>
+                                <h4>{{$item->user->name ?? '-'}}</h4>
                                 <h5>on {{$item->created_at}}</h5>
                                 </span>
                             </div>
@@ -37,7 +37,7 @@
                         <div class="commant-text row">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-hidden">
                                 <div class="profile">
-                                <img class="img-responsive" src="images/client.png" alt="#">
+                                <img class="img-responsive" src="/images/client.png" alt="#">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-hidden">
@@ -51,7 +51,7 @@
                         <div class="commant-text row">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-hidden">
                                 <div class="profile">
-                                <img class="img-responsive" src="images/client.png" alt="#">
+                                <img class="img-responsive" src="/images/client.png" alt="#">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-hidden">
@@ -64,7 +64,7 @@
                                 <div class="commant-text row">
                                 <div class="col-lg-2 col-md-2 col-sm-4 col-xs-hidden">
                                     <div class="profile">
-                                        <img class="img-responsive" src="images/client.png" alt="#">
+                                        <img class="img-responsive" src="/images/client.png" alt="#">
                                     </div>
                                 </div>
                                 <div class="col-lg-10 col-md-10 col-sm-8 col-xs-hidden">
@@ -80,7 +80,7 @@
                                 <div class="commant-text row">
                                     <div class="col-lg-2 col-md-2 col-sm-4 col-xs-hidden">
                                         <div class="profile">
-                                            <img class="img-responsive" src="images/client.png" alt="#">
+                                            <img class="img-responsive" src="/images/client.png" alt="#">
                                         </div>
                                     </div>
                                     <div class="col-lg-10 col-md-10 col-sm-8 col-xs-hidden">
@@ -95,7 +95,7 @@
                         <div class="commant-text row">
                             <div class="col-lg-2 col-md-2 col-sm-4 col-xs-hidden">
                                 <div class="profile">
-                                <img class="img-responsive" src="images/client.png" alt="#">
+                                <img class="img-responsive" src="/images/client.png" alt="#">
                                 </div>
                             </div>
                             <div class="col-lg-10 col-md-10 col-sm-8 col-xs-hidden">

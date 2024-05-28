@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PageController::class, 'home'])->name('home');
 Route::get('/about', [PageController::class, 'about'])->name('about');
 Route::get('/news', [PageController::class, 'news'])->name('news');
-Route::get('/single-news', [PageController::class, 'singleNews'])->name('singleNews');
+Route::get('/single-news/{news}', [PageController::class, 'singleNews'])->name('singleNews');
 Route::get('/team', [PageController::class, 'team'])->name('team');
 Route::get('/single-player', [PageController::class, 'singlePlayer'])->name('singlePlayer');
 

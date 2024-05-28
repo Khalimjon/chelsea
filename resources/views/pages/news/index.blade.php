@@ -16,7 +16,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{ $item->title }}</h5>
                                 <p class="card-text">{{ $item->short_content }}</p>
-                                <a href="{{ route('singleNews', ['news' => $item->id]) }}" class="btn btn-primary">Ko'proq</a>
+                                <a href="{{ route('singleNews', $item->id) }}" class="btn btn-primary">Ko'proq</a>
                             </div>
                         </div>
                     @endforeach

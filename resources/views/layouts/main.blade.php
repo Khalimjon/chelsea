@@ -14,21 +14,21 @@
    <link rel="shortcut icon" href="" type="image/x-icon" />
    <link rel="apple-touch-icon" href="">
    <!-- Bootstrap CSS -->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
    <!-- Site CSS -->
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="{{asset('style.css')}}">
    <!-- Colors CSS -->
-   <link rel="stylesheet" href="css/colors.css">
+   <link rel="stylesheet" href="{{asset('css/colors.css')}}">
    <!-- ALL VERSION CSS -->
-   <link rel="stylesheet" href="css/versions.css">
+   <link rel="stylesheet" href="{{asset('css/versions.css')}}">
    <!-- Responsive CSS -->
-   <link rel="stylesheet" href="css/responsive.css">
+   <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
    <!-- Custom CSS -->
-   <link rel="stylesheet" href="css/custom.css">
+   <link rel="stylesheet" href="{{asset('css/custom.css')}}">
    <!-- font family -->
    <link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
    <!-- end font family -->
-   <link rel="stylesheet" href="/css/3dslider.css" />
+   <link rel="stylesheet" href="{{asset('/css/3dslider.css')}}" />
    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
    <script src="/js/3dslider.js"></script>
@@ -47,7 +47,7 @@
                      <div class="col-md-6">
                         <div class="full">
                            <div class="logo">
-                              <a href="index.html"><img src="images/logo.png" alt="#" /></a>
+                              <a href="{{route('home')}}"><img src="images/logo.png" alt="#" /></a>
                            </div>
                         </div>
                      </div>
@@ -63,16 +63,22 @@
                            <!-- end social icon -->
                            <!-- button section -->
                            <ul class="login">
-                              <li class="login-modal">
-                                 <a href="{{route('login')}}" class="login"><i class="fa fa-user"></i>Login</a>
-                              </li>
-                              <li>
-                                 <div class="cart-option">
+                            @if (!Auth::check())
+                                <li class="login-modal">
+                                <a href="{{route('login')}}" class="login"><i class="fa fa-user"></i>Login</a>
+                                </li>
+                                <li>
+                                <div class="cart-option">
                                     <a href="{{route('register')}}"><i class="fa fa-shopping-cart"></i>Register</a>
-                                 </div>
-                              </li>
-                           </ul>
-                           <!-- end button section -->
+                                </div>
+                                </li>
+                            @else
+                            <li class="login-modal">
+                                <a href="{{route('login')}}" class="login"><i class="fa fa-user"></i>Dashboard</a>
+                            </li>
+                                @endif
+                         <!-- end button section -->
+
                         </div>
                      </div>
                   </div>
@@ -137,11 +143,8 @@
                         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                            <div class="slider-contant" data-animation="animated fadeInRight">
-                              <h3>If you Don’t Practice<br>You <span class="color-yellow">Don’t Derserve</span><br>to win!</h3>
-                              <p>If you use this site regularly and would like to help keep the site on the Internet,<br>
-                                 please consider donating a small sum to help pay..
-                              </p>
-                              <button class="btn btn-primary btn-lg">Read More</button>
+                              <h3>Proud of LONDON<br>You <span class="color-blue">London is BLUE</span></h3>
+                              <button href="{{route('about')}}" class="btn btn-primary btn-lg">Read More</button>
                            </div>
                         </div>
                      </div>
@@ -153,9 +156,8 @@
                         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                            <div class="slider-contant" data-animation="animated fadeInRight">
-                              <h3>If you Don’t Practice<br>You <span class="color-yellow">Don’t Derserve</span><br>to win!</h3>
-                              <p>You can make a case for several potential winners of<br>the expanded European Championships.</p>
-                              <button class="btn btn-primary btn-lg">Button</button>
+                            <h3>Proud of LONDON<br>You <span class="color-blue">London is BLUE</span></h3>
+                              <button href="{{route('about')}}" class="btn btn-primary btn-lg">Button</button>
                            </div>
                         </div>
                      </div>
@@ -167,9 +169,8 @@
                         <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12"></div>
                         <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
                            <div class="slider-contant" data-animation="animated fadeInRight">
-                              <h3>If you Don’t Practice<br>You <span class="color-yellow">Don’t Derserve</span><br>to win!</h3>
-                              <p>You can make a case for several potential winners of<br>the expanded European Championships.</p>
-                              <button class="btn btn-primary btn-lg">Button</button>
+                              <<h3>Proud of LONDON<br>You <span class="color-blue">London is BLUE</span></h3>
+                              <button href="{{route('about')}}" class="btn btn-primary btn-lg">Button</button>
                            </div>
                         </div>
                      </div>
@@ -218,7 +219,7 @@
                  <div class="full">
                     <div class="footer-widget">
                        <div class="footer-logo">
-                          <a href="#"><img src="images/footer-logo.png" alt="#" /></a>
+                          <a href="#"><img src="{{asset('images/footer-logo.png')}}" alt="#" /></a>
                        </div>
                        <p>Most of our events have hard and easy route choices as we are always keen to encourage new riders.</p>
                        <ul class="social-icons style-4 pull-left">

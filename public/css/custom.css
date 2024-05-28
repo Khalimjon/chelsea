@@ -1,5 +1,5 @@
-/****************************************** 
-	File Name: custom.css 
+/******************************************
+	File Name: custom.css
 /******************************************/
 /** ADD YOUR AWESOME CODES HERE **/
  * {
@@ -18,13 +18,13 @@
      padding: 10px 15px;
 }
  .skyblue {
-     background-image:url('../images/main-slider-img1.jpg');
+     background-image:url('https://img.chelseafc.com/image/upload/f_auto,w_1440,c_fill,g_faces,q_90/editorial/match-reports/2023-24/West%20Ham%20home%20(May%2024)/Chelsea_squad_vs_West_Ham.jpg');
 }
  .darkerskyblue {
-     background-image:url('../images/bg1.png');
+     background-image:url('https://pbs.twimg.com/media/F7wK0_VXoAA07FC.jpg:large');
 }
  .deepskyblue {
-     background-image:url('../images/bg1.png');
+     background-image:url('https://e0.pxfuel.com/wallpapers/906/807/desktop-wallpaper-chelsea-football-club-stamford-bridge-stadium.jpg');
 }
  .carousel-indicators {
      bottom: 0;

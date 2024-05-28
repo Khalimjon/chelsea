@@ -236,7 +236,8 @@
             <div class="col-md-12">
                 <div class="full">
                     <div class="match_vedio">
-                    <img class="img-responsive" src="images/img-07.jpg" alt="#" />
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/kIXPGSa-d24?si=tzlNHcGelokCcCOX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/2vw3P6rTH0o?si=fL2EGIxXMb--p-lj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -280,7 +281,7 @@
                               </div>
                            </div>
                         </div>
-                     </div> 
+                     </div>
                     @endforeach
 
                 </div>

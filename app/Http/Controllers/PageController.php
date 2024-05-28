@@ -32,9 +32,11 @@ class PageController extends Controller
         ]);
     }
 
-    public function singleNews(News $news){
+    public function singleNews($news)
+    {
+        $item = News::with('user')->findOrFail($news);
         return view('pages.news.single-news', [
-            'item' => $news
+            'item' => $item
         ]);
     }
 
